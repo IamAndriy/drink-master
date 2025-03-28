@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://iamandriy.github.io/drink-master-frontend",
+  "homepage": "https://iamandriy.github.io/drink-master",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/IamAndriy/drink-master-frontend.git"
+    "url": "git+https://github.com/IamAndriy/drink-master.git"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
