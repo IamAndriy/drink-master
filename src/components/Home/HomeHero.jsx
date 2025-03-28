@@ -1,10 +1,16 @@
+import { useContext } from 'react';
+import { GlobalContext } from '../../context/GlobalContext';
 import { HeroSection, Box, BoxWrapper, HeroTitle, Text, BtnAddDrinks, ImgMain } from './Home.styled';
-import img from '../../assets/images/coctailPhoto.png';
+// import img from '../../assets/images/coctailPhoto.png';
+
 
 const HomeHero = () => {
 
+  const {theme} = useContext(GlobalContext);
+
+
   return  <HeroSection>
-            <Box>
+            <Box themeName={theme}>
               
               <BoxWrapper>
                 
@@ -23,7 +29,7 @@ const HomeHero = () => {
                 
               </BoxWrapper>
 
-              <ImgMain src={img} alt="main-coctail" />
+              {/* <ImgMain src={img} alt="main-coctail" /> */}
               
             </Box>
           </HeroSection>

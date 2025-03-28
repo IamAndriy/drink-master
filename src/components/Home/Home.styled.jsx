@@ -1,5 +1,11 @@
 import styled from '@emotion/styled';
 import { Link } from 'react-router-dom';
+import {reactComponent as heroBackgroundDark_1x} from '../../assets/images/home/home-hero-dark@1x.jpg';
+import {reactComponent as heroBackgroundDark_2x} from '../../assets/images/home/home-hero-dark@2x.jpg';
+import {reactComponent as heroBackgroundDark_3x} from '../../assets/images/home/home-hero-dark@3x.jpg';
+import {reactComponent as heroBackgroundLight_1x} from '../../assets/images/home/home-hero-light@1x.jpg';
+import {reactComponent as heroBackgroundLight_2x} from '../../assets/images/home/home-hero-light@2x.jpg';
+import {reactComponent as heroBackgroundLight_3x} from '../../assets/images/home/home-hero-light@3x.jpg';
 
 //Hero---------------------------------------
 export const HeroSection = styled.section`
@@ -22,10 +28,31 @@ export const Box = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  background: url()
 
   @media screen and (min-width: 1280px) {
     flex-direction: row;
   }
+
+  @media screen and (min-device-pixel-ratio: 1) and (min-width: 1339.9px),
+         screen and (min-resolution : 96dpi) and (min-width: 1339.9px),
+         screen and (min-resolution : 1dppx) and (min-width: 1339.9px){
+    background-image: url(${(props)=> themeName==='dark' ? heroBackgroundDark_1x : heroBackgroundLight_1x });
+   }
+
+  @media screen and (min-device-pixel-ratio: 2) and (max-width:  1339.9px),
+         screen and (min-resolution : 192dpi) and (max-width:  1339.9px),
+         screen and (min-resolution : 2dppx) and (max-width:  1339.9px){
+    background-image: url(${(props)=> themeName==='dark' ? heroBackgroundDark_2x : heroBackgroundLight_2x });
+  }
+
+    @media screen and (min-device-pixel-ratio: 3) and (max-width:  1339.9px),
+         screen and (min-resolution : 288dpi) and (max-width:  1339.9px),
+         screen and (min-resolution : 3dppx) and (max-width:  1339.9px){
+    background-image: url(${(props)=> themeName==='dark' ? heroBackgroundDark_3x : heroBackgroundLight_3x });
+  }
+}
+
 `;
 
 export const BoxWrapper = styled.div`
