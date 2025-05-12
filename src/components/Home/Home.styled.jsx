@@ -37,19 +37,19 @@ export const Box = styled.div`
   @media screen and (min-device-pixel-ratio: 1) and (min-width: 1339.9px),
          screen and (min-resolution : 96dpi) and (min-width: 1339.9px),
          screen and (min-resolution : 1dppx) and (min-width: 1339.9px){
-    background-image: url(${(props)=> themeName==='dark' ? heroBackgroundDark_1x : heroBackgroundLight_1x });
+    background-image: url(${(props)=> props.themeName==='dark' ? heroBackgroundDark_1x : heroBackgroundLight_1x });
    }
 
   @media screen and (min-device-pixel-ratio: 2) and (max-width:  1339.9px),
          screen and (min-resolution : 192dpi) and (max-width:  1339.9px),
          screen and (min-resolution : 2dppx) and (max-width:  1339.9px){
-    background-image: url(${(props)=> themeName==='dark' ? heroBackgroundDark_2x : heroBackgroundLight_2x });
+    background-image: url(${(props)=> props.themeName==='dark' ? heroBackgroundDark_2x : heroBackgroundLight_2x });
   }
 
     @media screen and (min-device-pixel-ratio: 3) and (max-width:  1339.9px),
          screen and (min-resolution : 288dpi) and (max-width:  1339.9px),
          screen and (min-resolution : 3dppx) and (max-width:  1339.9px){
-    background-image: url(${(props)=> themeName==='dark' ? heroBackgroundDark_3x : heroBackgroundLight_3x });
+    background-image: url(${(props)=> props.themeName==='dark' ? heroBackgroundDark_3x : heroBackgroundLight_3x });
   }
 }
 
